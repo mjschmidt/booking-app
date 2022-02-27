@@ -35,6 +35,13 @@ func main() {
 		fmt.Println("How many tickets do you want?")
 		fmt.Scan(&ticketNumber)
 
+		if ticketNumber > remainingTickets {
+
+			fmt.Printf("You're requesting too many tickets, add a number less than %v\n", remainingTickets)
+			continue
+
+		}
+
 		remainingTickets = remainingTickets - ticketNumber
 		bookings = append(bookings, firstName+" "+lastName+",")
 
@@ -51,6 +58,14 @@ func main() {
 		//fmt.Printf("%v %v got %v tickets sent to %v\n", firstName, lastName, ticketNumber, email)
 		//fmt.Printf("Thre are %v left\n", remainingTickets)
 
+		noTicketsRemaining := remainingTickets == 0
+		if noTicketsRemaining {
+
+			//end program
+			fmt.Println("Our conference is now sold out, congrats you got the last tickets!")
+			break
+
+		}
 	}
 
 }
