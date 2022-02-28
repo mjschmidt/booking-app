@@ -35,10 +35,14 @@ func main() {
 		fmt.Println("How many tickets do you want?")
 		fmt.Scan(&ticketNumber)
 
-		if ticketNumber > remainingTickets {
+		if ticketNumber >= remainingTickets {
 
 			fmt.Printf("You're requesting too many tickets, add a number less than %v\n", remainingTickets)
 			continue
+
+		} else {
+
+			fmt.Printf("We have %v remaining tickets\n", remainingTickets)
 
 		}
 
