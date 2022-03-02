@@ -23,6 +23,8 @@ func main() {
 		var email string
 		// Tom's tocket order
 
+		greetUsers()
+
 		fmt.Println("Enter your firstname:")
 		fmt.Scan(&firstName)
 
@@ -39,10 +41,6 @@ func main() {
 
 			fmt.Printf("You're requesting too many tickets, add a number less than %v\n", remainingTickets)
 			continue
-
-		} else {
-
-			fmt.Printf("We have %v remaining tickets\n", remainingTickets)
 
 		}
 
@@ -69,7 +67,15 @@ func main() {
 			fmt.Println("Our conference is now sold out, congrats you got the last tickets!")
 			break
 
+		} else {
+
+			fmt.Printf("We have %v remaining tickets\n", remainingTickets)
+
 		}
 	}
 
+}
+
+func greetUsers() {
+	fmt.Println("Welcome!")
 }
