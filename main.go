@@ -75,7 +75,3 @@ func main() {
 	}
 
 }
-
-func greetUsers() {
-	fmt.Println("Welcome!")
-}
